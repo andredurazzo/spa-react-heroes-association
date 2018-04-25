@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Input, Row } from 'react-materialize';
+import Container from 'react-materialize/lib/Container';
+import Button from 'react-materialize/lib/Button';
 
 class FormHero extends Component {
 
@@ -22,15 +25,23 @@ class FormHero extends Component {
     render() {
         return (
             <div>
-                <p>
-                    Register a New Hero
-                </p>
+                <h4>Register a New Hero</h4>
                 <form>
-                    <label>
-                        Codename:
-                        <input type="text" name="name" />
-                    </label>
-                    <input type="submit" value="Submit" />
+                    <Container>
+                        <Row>
+                            <Input s={12} label="Codename" type="text"></Input>
+                            <Input s={6} label="Local" type="text"></Input>
+                            <Input s={6} label="Main Ability" type="select">
+                                <option value='1'>Nope</option>
+                                <option value='2'>Teleport</option>
+                                <option value='3'>Laser Eyes</option>
+                                <option value='4'>Invisibily</option>
+                            </Input>
+                        </Row>
+                        <Row className="right-align">
+                            <Button type="submit" value="Submit">Register</Button>
+                        </Row>
+                    </Container>
                 </form>
             </div>
         );

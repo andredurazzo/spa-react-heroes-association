@@ -22,12 +22,9 @@ class Menu extends Component {
                     >
                     <SideNavItem subheader className="center-align">Heroes Association</SideNavItem>
                     <SideNavItem divider />
-                    <SideNavItem icon="home">
-                        <NavLink to="/">Home</NavLink>
-                    </SideNavItem>
-                    <SideNavItem icon="fiber_new">
-                        <NavLink to="/form">Register a New Hero</NavLink>
-                    </SideNavItem>
+                        <li><NavLink to="/"><Icon>home</Icon>Home</NavLink></li>
+                        <li><NavLink to="/hero/form"><Icon>fiber_new</Icon>Register a New Hero</NavLink></li>
+                        <li><NavLink to="/hero/list"><Icon>list</Icon>Heroes</NavLink></li>
                     </SideNav>
                 </div>
                 <div className="col menu s11">
