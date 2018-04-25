@@ -10,9 +10,9 @@ A ReactJS SPA, used as test case for my own knowlegde.
 
 ## Configure
 
-`
+```
   npm install
-`
+```
 
 ## Available Scripts
 
