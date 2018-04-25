@@ -1,8 +1,18 @@
 # Heroes Association
 
-## Description
-
 A ReactJS SPA, used as test case for my own knowlegde.
+
+## Dependecies
+
+- Node.js
+- ReactJS
+- React Materialize (react-materialize)
+
+## Configure
+
+`
+  npm install
+`
 
 ## Available Scripts
 
