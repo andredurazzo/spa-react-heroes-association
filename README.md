@@ -1,6 +1,6 @@
 # Heroes Association
 
-A ReactJS SPA, used as test case for my own knowlegde.
+A ReactJS SPA, used as test case for my own knowlegde on React Framework.
 
 ## Dependecies
 
