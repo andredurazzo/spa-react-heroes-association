@@ -12,6 +12,7 @@ class AppRoute extends Component {
                 <Route exact path="/spa-react-heroes-association/" component={Home} />
                 <Route path="/spa-react-heroes-association/hero/form" component={FormHero} />
                 <Route path="/spa-react-heroes-association/hero/list" component={ListHero} />
+                <Route path='*' exact={true} component={Home} />
             </Switch>
         );
     }

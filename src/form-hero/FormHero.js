@@ -1,48 +1,65 @@
 import React, { Component } from 'react';
-import { Input, Row } from 'react-materialize';
-import Container from 'react-materialize/lib/Container';
-import Button from 'react-materialize/lib/Button';
+import { Input, Row, Container, Button, Icon } from 'react-materialize';
 
 class FormHero extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+
+        this.state = {
+            codename: "",
+            local: "",
+            mp: "nope",
+        };
     
-        this.handleChange = this.handleChange.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     
-    handleChange(event) {
-        this.setState({value: event.target.value});
+    handleInputChange(event) {
+        const target = event.target;
+        this.setState({
+            [target.name]: target.value
+        });
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
+        console.log("form was submitted:", this.state);
+        //alert('A name was submitted: ' + this.state);
         event.preventDefault();
     }
 
     render() {
         return (
-            <div>
+            <div style={{minHeight: 400}}>
                 <h4>Register a New Hero</h4>
-                <form>
-                    <Container>
+                <Container>
+                    <form onSubmit={this.handleSubmit}>
                         <Row>
-                            <Input s={12} label="Codename" type="text"></Input>
-                            <Input s={6} label="Local" type="text"></Input>
-                            <Input s={6} label="Main Ability" type="select">
-                                <option value='1'>Nope</option>
-                                <option value='2'>Teleport</option>
-                                <option value='3'>Laser Eyes</option>
-                                <option value='4'>Invisibily</option>
+                            <Input s={12} label="Codename" name="codename" type="text" required className="validate"
+                                value={this.state.codename} onChange={this.handleInputChange}>
+                                <Icon>account_circle</Icon>
+                            </Input>
+                            <Input s={6} label="Local" name="local" type="text" required validate
+                                value={this.state.local} onChange={this.handleInputChange}>
+                                <Icon>place</Icon>
+                            </Input>
+                            <Input s={6} label="Main Ability" name="mp" type="select"
+                                value={this.state.mp} onChange={this.handleInputChange}
+                            >
+                                <option value='nope'>Nope</option>
+                                <option value='teleport'>Teleport</option>
+                                <option value='laser_eyes'>Laser Eyes</option>
+                                <option value='invisibility'>Invisibility</option>
+                                <option value='???'>Other</option>
                             </Input>
                         </Row>
                         <Row className="right-align">
-                            <Button type="submit" value="Submit">Register</Button>
+                            <Button className="light-blue" type="submit" value="Submit">Register</Button>
+                            {/* <Button onClick={this.handleSubmit}>Register</Button> */}
                         </Row>
-                    </Container>
-                </form>
+                    </form>
+                </Container>
             </div>
         );
     }
