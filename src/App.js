@@ -7,6 +7,7 @@ import './App.css';
 
 import AppRoute from "./AppRoute";
 import Menu from "./menu/Menu";
+import FooterHero from './footer-hero/FooterHero';
 
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
             <h1 className="App-title">Heroes Association</h1>
           </header>
           <AppRoute />
+          <FooterHero />
         </div>
       </BrowserRouter>
     );

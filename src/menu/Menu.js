@@ -22,9 +22,9 @@ class Menu extends Component {
                     >
                     <SideNavItem subheader className="center-align">Heroes Association</SideNavItem>
                     <SideNavItem divider />
-                        <li><NavLink to="/"><Icon>home</Icon>Home</NavLink></li>
-                        <li><NavLink to="/hero/form"><Icon>fiber_new</Icon>Register a New Hero</NavLink></li>
-                        <li><NavLink to="/hero/list"><Icon>list</Icon>Heroes</NavLink></li>
+                        <li><NavLink to="/spa-react-heroes-association/"><Icon>home</Icon>Home</NavLink></li>
+                        <li><NavLink to="/spa-react-heroes-association/hero/form"><Icon>fiber_new</Icon>Register a New Hero</NavLink></li>
+                        <li><NavLink to="/spa-react-heroes-association/hero/list"><Icon>list</Icon>Heroes</NavLink></li>
                     </SideNav>
                 </div>
                 <div className="col menu s11">
