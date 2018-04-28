@@ -20,7 +20,7 @@ class CardHero extends Component {
                     <p className="custom-p"><b>Main Ability:</b> {this.props.ability}</p>
                 </Col>
                 <Col s={6}>
-                    <p style={{marginTop: 0}}>Biography</p>
+                    <p style={{marginTop: 0}}><b>Biography</b></p>
                     <p className="custom-p" style={{textAlign: 'justify'}}>
                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 

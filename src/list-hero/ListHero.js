@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { Container, Collection, CollectionItem } from "react-materialize";
+import { Collection, CollectionItem } from "react-materialize";
 
 import CardHero from "./card-hero/CardHero";
+
+import "../home/Home.css"
 
 class ListHero extends Component {
 
@@ -23,11 +25,11 @@ class ListHero extends Component {
         return (
             <div style={{minHeight: 400}}>
                 <h4>Associated Heroes</h4>
-                <Container>
+                <div className="container custom">
                     <Collection>
                         {this.listItems}
                     </Collection>
-                </Container>
+                </div>
             </div>
         );
     }

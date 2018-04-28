@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Row, Col, Slide } from "react-materialize";
+import { Card, Row, Col, Slide, Container } from "react-materialize";
 
 import image1 from "../static/carousel1.jpg";
 import image2 from "../static/carousel2.jpg";
@@ -30,7 +30,7 @@ class Home extends Component {
                 src={highlight.img}
                 title={highlight.name}
                 placement="left">
-                    highlight.description
+                    {highlight.description}
                 </Slide>
             );
         });
@@ -38,9 +38,10 @@ class Home extends Component {
 
     render() {
         return (
+            <div className="container custom">
             <Row className="center-align">
                 <Col s={7}>
-                    <Card className="left-align hoverable">
+                    <Card className="left-align">
                         <h5 className="red-text"><strong>BREAKING NEWS</strong></h5>
                         <h5>A DISASTER LEVEL DRAGON APPEARS AT M-CITY</h5>
                         <Divider /><br/>
@@ -57,14 +58,15 @@ class Home extends Component {
                     </Card>
                 </Col>
                 <Col s={5}>
-                    <Card className="grey darken-4 hoverable" style={{padding: 0}}>
-                        <Slider indicators={false}>
+                    <h5 className="black-text" style={{marginBottom: 0}}>Highlights of the Week</h5>
+                    <Card className="grey darken-4 hoverable" style={{padding: 0, height: 400}}>
+                        <Slider indicators={true} style={{height: 380}} fullscreen={true}>
                             {this.listHighlights}
                         </Slider>
-                        <h5 className="white-text" style={{marginBottom: 0}}>Highlights of the Week</h5>
                     </Card>
                 </Col>
             </Row>
+            </div>
         );
     }
 }
