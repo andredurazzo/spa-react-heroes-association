@@ -1,16 +1,41 @@
 import React, { Component } from "react";
-import { Carousel, Card, Row, Col } from "react-materialize";
+import { Card, Row, Col, Slide } from "react-materialize";
 
 import image1 from "../static/carousel1.jpg";
 import image2 from "../static/carousel2.jpg";
 import image3 from "../static/carousel3.jpg";
 import imageBreaking from "../static/breakingnews.png";
 
-
 import './Home.css';
 import Divider from "react-materialize/lib/Divider";
+import Slider from "react-materialize/lib/Slider";
 
 class Home extends Component {
+
+    highlights;
+    listHighlights;
+
+    constructor() {
+        super();
+        this.highlights = [
+            {img: image1, name: "Saitama", description: "Bald Cape"},
+            {img: image2, name: "Genos", description: "Cybernetic Prodigy"},
+            {img: image3, name: "Mumem Rider", description: "Rides around on a bicycle"}
+        ];
+        
+        this.listHighlights = this.highlights.map((highlight) => {
+            return(
+                <Slide
+                key={highlight.name}
+                src={highlight.img}
+                title={highlight.name}
+                placement="left">
+                    highlight.description
+                </Slide>
+            );
+        });
+    }
+
     render() {
         return (
             <Row className="center-align">
@@ -33,14 +58,10 @@ class Home extends Component {
                 </Col>
                 <Col s={5}>
                     <Card className="grey darken-4 hoverable" style={{padding: 0}}>
-                        <h4 className="white-text" style={{marginTop: 0}}>Highlights of the Week</h4>
-                        <Carousel
-                            className="carousel-slider"
-                            options={{ duration: 200, fullWidth: true, indicators: true }}
-                            images={[
-                                image1, image2, image3
-                            ]}
-                        />
+                        <Slider indicators={false}>
+                            {this.listHighlights}
+                        </Slider>
+                        <h5 className="white-text" style={{marginBottom: 0}}>Highlights of the Week</h5>
                     </Card>
                 </Col>
             </Row>

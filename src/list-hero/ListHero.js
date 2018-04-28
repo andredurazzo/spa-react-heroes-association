@@ -6,17 +6,16 @@ import CardHero from "./card-hero/CardHero";
 class ListHero extends Component {
 
     heroes = [
-        {name: "Saitama", ranking: "B", local: "Z-City", ability: "Normal Punch"}, 
-        {name: "Mumen Rider", ranking: "C", local: "???", ability: "Nope"}, 
-        {name: "Genos", ranking: "S", local: "???", ability: "Cybernetic Skills"}, 
-        {name: "Tornado", ranking: "S", local: "???", ability: "Telekinesis"}, 
-        {name: "Silverfang", ranking: "S", local: "Z-City", ability: "Expert Martials Artist"}
+        {name: "Saitama", ranking: "B", local: "Z-City", ability: "Normal Punch", img: "saitama.jpg"}, 
+        {name: "Mumen Rider", ranking: "C", local: "???", ability: "Nope", img: "mumen.png"}, 
+        {name: "Genos", ranking: "S", local: "???", ability: "Cybernetic Skills", img: "genos.png"}, 
+        {name: "Tatsumaki", ranking: "S", local: "???", ability: "Telekinesis", img: "tatsumaki.png"}, 
+        {name: "Silverfang", ranking: "S", local: "Z-City", ability: "Expert Martials Artist", img: "silverfang.png"}
     ];
     
     listItems = this.heroes.map((hero) =>
         <CollectionItem key={hero.name}>
-            <CardHero name={hero.name} ranking={hero.ranking} 
-            local={hero.local} ability={hero.ability}/>
+            <CardHero {...hero}/>
         </CollectionItem>
     );
 

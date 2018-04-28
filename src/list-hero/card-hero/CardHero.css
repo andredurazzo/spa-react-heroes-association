@@ -1,3 +1,7 @@
 .custom-p {
     margin: 0
 }
+
+.rounded {
+    border-radius: 15px
+}
