@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Row, Col, Slide, Container } from "react-materialize";
+import { Card, Row, Col, Slider, Slide, Divider } from "react-materialize";
 
 import image1 from "../static/carousel1.jpg";
 import image2 from "../static/carousel2.jpg";
@@ -7,8 +7,6 @@ import image3 from "../static/carousel3.jpg";
 import imageBreaking from "../static/breakingnews.png";
 
 import './Home.css';
-import Divider from "react-materialize/lib/Divider";
-import Slider from "react-materialize/lib/Slider";
 
 class Home extends Component {
 

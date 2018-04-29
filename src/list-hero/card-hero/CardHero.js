@@ -11,7 +11,7 @@ class CardHero extends Component {
         return(
             <Row className="left-align" style={{marginBottom: 0}}>
                 <Col s={2}>
-                    <img className="responsive-img rounded" src={process.env.PUBLIC_URL+"/profile/"+this.props.img} alt={this.props.name}/>
+                    <img className="responsive-img card-img" src={process.env.PUBLIC_URL+"/profile/"+this.props.img} alt={this.props.name}/>
                 </Col>
                 <Col s={4}>
                     <h5>{this.props.name}</h5>
